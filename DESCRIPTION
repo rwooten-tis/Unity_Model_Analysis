@@ -1,0 +1,16 @@
+Package: uma
+Type: Package
+Title: Unity Model Analysis for Temporal Implicit Structures
+Version: 0.1.0
+Authors@R: person("Dr. Rebecca D.", "Wooten", 
+           email = "rebeccadwooten@gmail.com", 
+           role = c("aut", "cre"))
+Description: Implements the Unity Model Analysis (UMA) framework for Temporal 
+    Implicit Structures (TIS). Evaluates multivariate system boundaries by 
+    regressing a vector of unities against observed fields, interaction terms, 
+    and quadratic manifolds, utilizing geometric invariants and the Law of 
+    Cosines metric space.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3

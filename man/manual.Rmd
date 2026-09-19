@@ -1,0 +1,29 @@
+---
+title: "Manual"
+author: "Rebecca D Wooten"
+date: "2026-09-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+# Technical Manual: Invariants, Estimates, and System Metrics
+
+## 1. Mathematical & Geometric Invariants
+* **`angle_C(a2, b2, c2)`**: Calculates the systemic structural angle θ (in degrees) between error, model, and total sum of squares using the Law of Cosines.
+* **`lift_h(a2, b2, c2)`**: Measures the geometric orthogonal height ("lift") of the model space, representing the structural divergence of the regression hyperplane.
+* **`R_sq_modified(a2, b2, c2)`**: A custom geometric variation of the coefficient of determination adjusted for system coordinate alignment.
+
+## 2. Estimation Frameworks
+* **Linear Inversion**: Resolves explicit coordinate values by subtracting scaled background noise from unity:
+  \[\hat{x}_{j,i} = \frac{1 - \sum \alpha_{-i}x_{-i}}{\alpha_i}\]
+* **Manifold Inversion (QMR)**: Solves for coordinate locations analytically along a curved quadratic boundary using the quadratic formula:
+  \[A\hat{x}_i^2 + B\hat{x}_i + C = 0\]
+
+## 3. Invariant Shape Metrics (`univariate_analysis`)
+* **Consistence**: Calculates the structural variance allocation score (\(n\bar{x}^2 / \sum x^2\)).
+* **Self-Weighted Mean**: Evaluates the power-shifted central balance (\(\sum x^2 / \sum x\)).
+* **Pearson Median Skewness**: Tracks system directional bias relative to standard spread.

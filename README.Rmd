@@ -1,0 +1,29 @@
+---
+title: "README"
+author: "Rebecca D Wooten"
+date: "2026-09-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+# Temporal Implicit Structures (TIS) & Unity Model Analysis (UMA)
+
+## Overview
+This repository contains a collection of R scripts designed for **Temporal Implicit Structures (TIS)** analysis using the **Unity Model Analysis (UMA)** framework. Unlike traditional regression that designates an explicit dependent variable, UMA models the system balancing point by regressing a vector of ones (`unity <- 1`) against a matrix of observed variables, interaction terms, or quadratic variations.
+
+## Repository Contents
+* **`FunctionalCode.R`** (Planned/Central Script): Central script containing core geometric invariant functions (`angle_C`, `lift_h`, `R_sq_modified`) and univariate benchmarks.
+* **Model Configurations**:
+  * **Linear UMA**: Basic configuration tracking individual scaled balances.
+  * **Multiple Linear Regression UMA (MLR-UMA)**: Computes multivariate system boundaries alongside baseline Single Linear Regressions (SLR) for context.
+  * **Multiple Interactive Regression UMA (MIR-UMA)**: Extends data to include two-way interaction terms (\(x_i x_j\)).
+  * **Quadratic Manifold Regression UMA (QMR-UMA)**: Formulates full second-order polynomial manifolds including squared terms (\(x_i^2\)).
+  * **Rotational UMA**: Explores systemic geometric variance using alternating response targets.
+
+## Quick Start
+To test the models with the simulated datasets, open any configuration script in R and execute the entire file. Ensure your local working directory is updated or matches the internal tracking folder (`E:\\Research\\TIS`).
+s
